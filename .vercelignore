@@ -1,0 +1,8 @@
+node_modules/
+src/
+.vscode/
+.github/
+.git/
+package-lock.json
+*.log
+tmp/
