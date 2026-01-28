@@ -69,10 +69,10 @@ const Contact = () => {
                         Call us for immediate assistance
                       </p>
                       <a 
-                        href="tel:+919130590288" 
+                        href="tel:+919822196355" 
                         className="text-primary font-medium hover:underline text-lg"
                       >
-                        +91 913 059 0288
+                        +91 98221 96355
                       </a>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                     asChild
                     className="bg-background text-foreground hover:bg-background/90 group"
                   >
-                    <a href="tel:+919130590288">
+                    <a href="tel:+919822196355">
                       <Phone className="mr-2 w-4 h-4" />
                       Call Now
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -192,18 +192,8 @@ const Contact = () => {
                 <div className="bg-background border border-border rounded-lg p-6">
                   <h3 className="font-semibold text-foreground mb-4">Service Area</h3>
                   <p className="text-muted-foreground mb-4">
-                    We proudly serve clients throughout Pune and PCMC area, including:
+                    We provide services all over Maharashtra.
                   </p>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
-                    <span>• Chinchwad</span>
-                    <span>• Pimpri</span>
-                    <span>• Wakad</span>
-                    <span>• Hinjewadi</span>
-                    <span>• Akurdi</span>
-                    <span>• Nigdi</span>
-                    <span>• Ravet</span>
-                    <span>• Aundh</span>
-                  </div>
                 </div>
               </ScrollReveal>
             </div>
@@ -228,9 +218,9 @@ const Contact = () => {
           <ScrollReveal animation="fade-up" delay={0.2}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="tel:+919130590288">
+                <a href="tel:+919822196355">
                   <Phone className="mr-2 w-4 h-4" />
-                  +91 913 059 0288
+                  +91 98221 96355
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>

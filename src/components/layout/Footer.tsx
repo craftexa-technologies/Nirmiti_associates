@@ -17,7 +17,7 @@ const Footer = () => {
                   NIRMITI ASSOCIATES
                 </span>
                 <span className="text-xs text-muted-foreground uppercase tracking-widest">
-                  Builders
+                  Civil Engineering & Industrial Contractors
                 </span>
               </div>
             </Link>
@@ -52,10 +52,10 @@ const Footer = () => {
           <div>
             <h4 className="text-foreground font-semibold mb-4">Our Services</h4>
             <nav className="flex flex-col gap-2">
+              <span className="text-muted-foreground text-sm">Machine Foundation</span>
               <span className="text-muted-foreground text-sm">All Types of Construction</span>
               <span className="text-muted-foreground text-sm">Residential Construction</span>
               <span className="text-muted-foreground text-sm">Commercial Construction</span>
-              <span className="text-muted-foreground text-sm">Machine Foundation</span>
             </nav>
           </div>
 
@@ -65,7 +65,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+919130590288" className="hover:text-primary transition-colors">+91 913 059 0288</a>
+                <a href="tel:+919822196355" className="hover:text-primary transition-colors">+91 98221 96355</a>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail className="w-4 h-4 text-primary" />

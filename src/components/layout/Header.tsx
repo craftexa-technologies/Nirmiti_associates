@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -28,7 +29,7 @@ const Header = () => {
                 NIRMITI ASSOCIATES
               </span>
               <span className="text-xs text-muted-foreground uppercase tracking-widest">
-                Builders
+                Civil Engineering & Industrial Contractors
               </span>
             </div>
           </Link>
@@ -51,21 +52,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA & Theme Toggle */}
+          <div className="hidden md:flex items-center gap-4">
+            <ModeToggle />
             <Button asChild>
               <Link to="/contact">Get a Quote</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex md:hidden items-center gap-2">
+            <ModeToggle />
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

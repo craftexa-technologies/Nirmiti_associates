@@ -11,14 +11,14 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background gradient fallback */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" />
       
       {/* Background Video or Image fallback */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=1600&q=80")' }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-white/40 dark:bg-black/60" />
       </div>
       
       {/* Diagonal Stripes Decoration with Parallax */}

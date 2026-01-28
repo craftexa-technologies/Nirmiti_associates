@@ -50,8 +50,8 @@ const ContactFormSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 913 059 0288",
-      href: "tel:+919130590288",
+      value: "+91 98221 96355",
+      href: "tel:+919822196355",
     },
     {
       icon: Mail,
