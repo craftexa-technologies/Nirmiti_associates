@@ -28,14 +28,14 @@ const Header = () => {
               <span className="text-lg font-bold text-foreground tracking-tight">
                 NIRMITI ASSOCIATES
               </span>
-              <span className="text-xs text-muted-foreground uppercase tracking-widest">
+              <span className="text-[10px] md:text-[8px] lg:text-[10px] text-muted-foreground uppercase tracking-wider font-semibold">
                 Civil Engineering & Industrial Contractors
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

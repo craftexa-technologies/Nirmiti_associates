@@ -75,7 +75,7 @@ const ServicesOverview = () => {
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent dark:from-background/90 dark:via-background/40 dark:to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <div className="w-12 h-12 bg-primary/90 rounded-lg flex items-center justify-center">
                       <service.icon className="w-6 h-6 text-primary-foreground" />
