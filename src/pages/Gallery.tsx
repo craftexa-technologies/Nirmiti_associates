@@ -3,6 +3,14 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import useParallax from "@/hooks/useParallax";
 
 // Gallery images imports
+// Images from folder 1-7 should appear first
+import one from "@/assets/gallery/1-7/one.jpeg";
+import two from "@/assets/gallery/1-7/two.jpeg";
+import three from "@/assets/gallery/1-7/three.jpeg";
+import four from "@/assets/gallery/1-7/four.jpeg";
+import five from "@/assets/gallery/1-7/five.jpeg";
+import six from "@/assets/gallery/1-7/six.jpeg";
+import seven from "@/assets/gallery/1-7/seven.jpeg";
 import g1 from "@/assets/gallery/g1.jpg";
 import g2 from "@/assets/gallery/g2.jpg";
 import g3 from "@/assets/gallery/g3.jpg";
@@ -17,18 +25,25 @@ import g11 from "@/assets/gallery/g11.jpg";
 import g12 from "@/assets/gallery/g12.jpg";
 
 const galleryImages = [
-  { src: g1, alt: "Construction Project 1" },
-  { src: g2, alt: "Construction Project 2" },
-  { src: g3, alt: "Construction Project 3" },
-  { src: g4, alt: "Construction Project 4" },
-  { src: g5, alt: "Construction Project 5" },
-  { src: g6, alt: "Construction Project 6" },
-  { src: g7, alt: "Construction Project 7" },
-  { src: g8, alt: "Construction Project 8" },
-  { src: g9, alt: "Construction Project 9" },
-  { src: g10, alt: "Construction Project 10" },
-  { src: g11, alt: "Construction Project 11" },
-  { src: g12, alt: "Construction Project 12" },
+  { src: one, alt: "Construction Project 1" },
+  { src: two, alt: "Construction Project 2" },
+  { src: three, alt: "Construction Project 3" },
+  { src: four, alt: "Construction Project 4" },
+  { src: five, alt: "Construction Project 5" },
+  { src: six, alt: "Construction Project 6" },
+  { src: seven, alt: "Construction Project 7" },
+  { src: g1, alt: "Construction Project 8" },
+  { src: g2, alt: "Construction Project 9" },
+  { src: g3, alt: "Construction Project 10" },
+  { src: g4, alt: "Construction Project 11" },
+  { src: g5, alt: "Construction Project 12" },
+  { src: g6, alt: "Construction Project 13" },
+  { src: g7, alt: "Construction Project 14" },
+  { src: g8, alt: "Construction Project 15" },
+  { src: g9, alt: "Construction Project 16" },
+  { src: g10, alt: "Construction Project 17" },
+  { src: g11, alt: "Construction Project 18" },
+  { src: g12, alt: "Construction Project 19" },
 ];
 
 const Gallery = () => {
