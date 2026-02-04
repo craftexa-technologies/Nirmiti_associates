@@ -14,8 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
-    }
+      contacts: {
+        Row: {
+          address: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string | null
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          address?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message?: string | null
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          address?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      projects: {
+        Row: {
+          category: string | null
+          created_at: string
+          description: string | null
+          display_order: number | null
+          id: string
+          image_url: string
+          title: string
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          display_order?: number | null
+          id?: string
+          image_url: string
+          title: string
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          display_order?: number | null
+          id?: string
+          image_url?: string
+          title?: string
+        }
+        Relationships: []
+      },
+      services: {
+        Row: {
+          created_at: string
+          description: string | null
+          display_order: number | null
+          features: string[] | null
+          id: string
+          image_url: string | null
+          icon_name: string | null
+          title: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          display_order?: number | null
+          features?: string[] | null
+          id?: string
+          image_url?: string | null
+          icon_name?: string | null
+          title: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          display_order?: number | null
+          features?: string[] | null
+          id?: string
+          image_url?: string | null
+          icon_name?: string | null
+          title?: string
+        }
+        Relationships: []
+      }    }
     Views: {
       [_ in never]: never
     }

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactFormSection = () => {
   const { toast } = useToast();
@@ -28,22 +29,60 @@ const ContactFormSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // First, insert into contacts table
+      const { data, error } = await supabase.from("contacts").insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          message: formData.message,
+        },
+      ]);
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
+      if (error) {
+        throw error;
+      }
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      // Then, send email notification via Edge Function
+      const { error: emailError } = await supabase.functions.invoke('send-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          message: formData.message,
+        }
+      });
+
+      if (emailError) {
+        console.error('Email sending failed:', emailError);
+        // Don't throw here, as the contact was saved successfully
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        message: "",
+      });
+    } catch (err: unknown) {
+      console.error(err);
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      toast({
+        title: "Submission failed",
+        description: errorMessage,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
